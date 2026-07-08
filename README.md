@@ -35,7 +35,6 @@ A clean, ATS-friendly résumé template written in LaTeX. The project is designe
 ├── resume-LaTeX-template.tex            # Main LaTeX CV template
 ├── resume-style.sty                     # Custom LaTeX package with formatting commands
 ├── references.bib                       # BibLaTeX publication database
-├── preview-sample-resume.pdf            # Example compiled PDF output
 ├── image/
 │   └── handwritten_signature.png        # Optional signature image
 │
