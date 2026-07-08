@@ -12,7 +12,7 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@v4
@@ -22,7 +22,7 @@ jobs:
           args: -pdf -interaction=nonstopmode -shell-escape
 
       - name: Upload PDF artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: compiled-resume
           path: resume-LaTeX-template.pdf
