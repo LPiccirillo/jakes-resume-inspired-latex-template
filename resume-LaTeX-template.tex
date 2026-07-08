@@ -1,0 +1,207 @@
+%--------------------------------------------------------
+% Resume in LaTeX
+% Author : Luigi Piccirillo
+%--------------------------------------------------------
+
+% DOCUMENT CLASS
+% Defines the base document type and global page settings.
+% extarticle is an extended version of the standard LaTeX
+% article class, allowing additional font sizes.
+% Arguments:
+%   a4paper -> uses A4 page dimensions.
+%   9pt     -> sets the base font size to 9 points, useful
+%              for compact CV layouts.
+\documentclass[a4paper,9pt]{extarticle}
+
+% CUSTOM CV STYLE PACKAGE
+% Loads the custom style file containing all formatting
+% definitions and reusable commands for the CV.
+% The resume_style.sty file includes:
+% - required LaTeX packages;
+% - page layout and margin settings;
+% - colours and typography settings;
+% - header/footer configuration;
+% - section formatting;
+% - custom commands for CV entries, bullet points
+%   and structured sections.
+% Keeping these definitions in a separate .sty file makes
+% the main .tex document cleaner and allows the same CV
+% template to be reused for different documents.
+\usepackage{resume-style}
+
+% Adds the bibliography database containing publication
+% references formatted according to the selected bibliography style.
+\addbibresource{references.bib}
+
+%--------------------------------------------------------
+%%%%%%%%%%%%%%%%%% RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%
+%--------------------------------------------------------
+
+\begin{document}
+
+%----------HEADING----------
+
+\begin{center}
+    {\Huge \bfseries Full Name} \\ \vspace{2pt}
+    City, Country \\ \vspace{2pt}
+    \small
+    \raisebox{-0.1\height}\faPhone\ +00 000 0000000 ~
+    \href{mailto:email@example.com}{
+        \raisebox{-0.2\height}\faEnvelope\ email@example.com} ~
+    \href{https://linkedin.com/in/username}{
+        \raisebox{-0.2\height}\faLinkedin\ linkedin.com/in/username} ~
+    \href{https://github.com/username}{
+        \raisebox{-0.2\height}\faGithub\ github.com/username}\\[2pt]
+\end{center}
+
+%-----------PROFILE-----------
+
+\section{Profile}
+
+\resumeProfile{[Current Position] with a background in [Field of Study]. Experienced in [Skill 1], [Skill 2], and [Skill 3], using tools such as [Technology 1] and [Technology 2]. Interested in [Area of Interest] and passionate about applying analytical and technical skills to solve real-world problems. Experience in [Research/Industry Domain] through academic, professional, or personal projects. Motivated to learn, collaborate, and contribute to impactful solutions.}
+
+%-----------EXPERIENCE-----------
+
+\section{Professional Experience}
+
+\resumeSubHeadingListStart
+
+\resumeSubheading
+{Job Title}
+{MM/YYYY -- MM/YYYY}
+{Company / Organization}
+{City, Country}
+\resumeItemListStart
+\resumeItem{Describe your main responsibilities and contributions.}
+\resumeItem{Highlight measurable achievements or impact whenever possible.}
+\resumeItem{Mention relevant tools, technologies, or methodologies used.}
+\resumeItem{Emphasize collaboration, leadership, or problem-solving experience.}
+\resumeItemListEnd
+
+\resumeSubheading
+{Job Title}
+{MM/YYYY -- Present}
+{Company / Organization}
+{City, Country}
+\resumeItemListStart
+\resumeItem{Describe your key responsibilities and day-to-day activities.}
+\resumeItem{Summarize significant projects or accomplishments.}
+\resumeItem{Include technical skills, tools, or domain expertise relevant to the role.}
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%-----------EDUCATION-----------
+
+\section{Education}
+
+\resumeSubHeadingListStart
+
+\resumeSubheadingEdu
+{Degree Name}
+{MM/YYYY -- MM/YYYY or Present}
+{University / Institution}
+{City, Country}
+{GPA: X.XX/4.00 • Final Grade: XX/XX}
+\resumeItemListStart
+\resumeItem{Brief description of the programme, major, specialization, or relevant coursework.}
+\resumeItem{Highlight relevant subjects, projects, research activities, or technical skills developed during the programme.}
+\resumeItem{Optionally include a thesis, capstone project, honours, scholarships, or other notable achievements.}
+\resumeItemListEnd
+
+\resumeSubheadingEdu
+{Degree Name}
+{MM/YYYY -- MM/YYYY}
+{University / Institution}
+{City, Country}
+{GPA: X.XX/4.00 • Final Grade: XX/XX}
+\resumeItemListStart
+\resumeItem{Brief description of the programme and its primary focus.}
+\resumeItem{Mention relevant coursework, projects, or extracurricular academic activities.}
+\resumeItem{Include honours, awards, thesis, or other accomplishments if applicable.}
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+
+\section{Projects}
+
+\resumeSubHeadingListStart
+
+\resumeProject
+{project-name}
+{YYYY}
+{Public • MIT License}
+{GitHub Repository}
+{Brief description of the project, highlighting its purpose, key features, and the problem it solves.}
+{Python, SQL}
+
+\resumeProject
+{another-project}
+{YYYY}
+{Public • Apache-2.0 License}
+{GitHub Repository}
+{Describe the project's objectives, your main contributions, and the technologies or methodologies used.}
+{JavaScript, React, Node.js}
+
+\resumeProject
+{awesome-tool}
+{YYYY}
+{Public • GPL-3.0 License}
+{GitHub Repository}
+{Open-source tool or library designed to automate workflows, improve productivity, or simplify common development tasks.}
+{Go, Docker, GitHub Actions}
+
+\resumeSubHeadingListEnd
+
+%-----------SKILLS-----------
+
+\section{Skills}
+
+\resumeSkill{Technical Skills}{
+Skill 1 • Skill 2 • Skill 3 • Skill 4 • Skill 5 • Skill 6}
+
+\resumeSkill{Programming Languages \& Tools}{
+Language 1 • Language 2 • Framework 1 • Framework 2 • Database • Git • Docker • Linux • Cloud Platform • IDE}
+
+\resumeSkill{Professional Skills}{
+Communication • Teamwork • Problem Solving • Leadership • Project Management • Time Management}
+
+\resumeSkillInline{Languages}{
+Language (Native) • Language (Proficiency Level) • Language (Proficiency Level)}
+
+\resumeSkillInline{Certifications}{
+Certification Name • Certification Name (Optional)}
+
+%-----------PUBLICATIONS-----------
+
+\section{Publications}
+
+\begin{itemize}[leftmargin=0.15in]
+    \resumePublication{author2026sample}
+    \resumePublication{author2025chapter}
+    \resumePublication{author2024conference}
+\end{itemize}
+
+%-----------SIGNATURE-----------
+
+\vspace{5pt}
+
+\begin{minipage}[t]{0.45\textwidth}
+City, Country, DD/MM/YYYY
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.45\textwidth}
+\begin{flushright}
+Full Name
+
+\vspace{-1cm}
+
+% Optional handwritten signature
+\includegraphics[width=4cm]{image/handwritten_signature.png}
+
+\end{flushright}
+\end{minipage}
+
+\end{document}
