@@ -24,12 +24,21 @@ A clean, ATS-friendly résumé template written in LaTeX. The project is designe
 
 ```text
 .
-├── resume-LaTeX-template.tex   # Main CV document
-├── resume-style.sty            # Custom commands and formatting
-├── references.bib              # Publication database
+├── .github/
+│   └── workflows/
+│       └── latex.yml                    # Automatic LaTeX compilation workflow
+│
+├── .gitignore                           # Ignored LaTeX auxiliary files
+│
+├── resume-LaTeX-template.tex            # Main LaTeX CV template
+├── resume-style.sty                     # Custom LaTeX package with formatting commands
+├── references.bib                       # BibLaTeX publication database
+├── preview-sample-resume.pdf            # Example compiled PDF output
 ├── image/
-│   └── handwritten_signature.png
-└── README.md
+│   └── handwritten_signature.png        # Optional signature image
+│
+├── LICENSE                              # MIT License
+└── README.md                            # Documentation and usage instructions
 ```
 
 ## Compilation
