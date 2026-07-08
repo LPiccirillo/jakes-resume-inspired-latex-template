@@ -6,6 +6,9 @@ on:
       - main
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -21,8 +24,17 @@ jobs:
           latexmk_use_xelatex: false
           args: -pdf -interaction=nonstopmode -shell-escape
 
+      - name: Rename PDF
+        run: cp resume-LaTeX-template.pdf resume.pdf
+
+      - name: Commit updated PDF
+        uses: stefanzweifel/git-auto-commit-action@v6
+        with:
+          commit_message: "Update compiled resume [skip ci]"
+          file_pattern: resume.pdf
+
       - name: Upload PDF artifact
         uses: actions/upload-artifact@v5
         with:
           name: compiled-resume
-          path: resume-LaTeX-template.pdf
+          path: resume.pdf
