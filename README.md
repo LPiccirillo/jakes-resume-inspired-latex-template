@@ -2,6 +2,8 @@
 
 A clean, ATS-friendly résumé template written in LaTeX. The project is designed to provide a modular and easily customizable structure suitable for academic, technical, and professional résumés.
 
+[![Download Resume](https://img.shields.io/badge/Resume-PDF-red?style=for-the-badge&logo=adobeacrobatreader)](./resume.pdf)
+
 ## Features
 
 - Clean one-page résumé layout
